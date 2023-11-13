@@ -28,12 +28,27 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label class="font-weight-bold">TAG</label>
-                                <input class="form-control" type="text" data-role="tagsinput" name="tags">
-                                @if ($errors->has('tags'))
-                                    <span class="text-danger">{{ $errors->first('tags') }}</span>
-                                @endif
+                            <div class="row mt-3">
+                                <div class="form-group col-6">
+                                    <label class="font-weight-bold">TAG</label>
+                                    <input class="form-control" type="text" data-role="tagsinput" name="tags">
+                                    @if ($errors->has('tags'))
+                                        <span class="text-danger">{{ $errors->first('tags') }}</span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <label class="fw-bold mb-2">CATEGORY</label>
+                                    <br>
+                                    <select name="category" class="btn border w-100 pb-2 pt-2 border border-dark"
+                                        id="">
+                                        <option value="">Pilih Category</option>
+                                        <option value="Laravel">Laravel</option>
+                                        <option value="Flutter">Flutter</option>
+                                        <option value="Bootstrap">Bootstrap</option>
+                                        <option value="React">React</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="form-group">
@@ -49,8 +64,8 @@
                                 @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                            <button type="submit" class="btn btn-md btn-primary bg-primary">UPDATE</button>
+                            <button type="reset" class="btn btn-md btn-warning bg-warning">RESET</button>
 
                         </form>
                     </div>
